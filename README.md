@@ -4,9 +4,6 @@ A full-stack, dependency-free Geometry Dash arcade clone and stage builder. Feat
 
 A precision, side-scrolling arcade platformer inspired by Geometry Dash. Built using clean separation of concerns, the project features responsive player mode transitions, a proximity-based warning vignette system, and a fully functional layout builder that lets users draw, test, export, and import custom maps. The entire frontend is served via a custom-engineered native Node.js HTTP backend server.
 
-### 🎥 Live Demo / Showcase
-[Insert Your Live Link or Demo GIF here]
-
 ### ⚙️ Core Architecture & Features
 *   **Tri-Modal Physics Engine:** Dynamic physics rules handling traditional grid jumping (Cube), thrust velocity bounds (Ship), and variable runtime gravity inversion (Ball).
 *   **Proximity Threat Detection:** A mathematical lookahead system calculating distances to upcoming active hazards, dynamically driving UI/UX vignette alpha levels and pulse behaviors based on player safety.
