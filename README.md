@@ -19,7 +19,7 @@ A precision, side-scrolling arcade platformer inspired by Geometry Dash. Built u
 *   **Data Representation:** JSON serialized state objects for puzzle stages.
 
 
-Engineered a side-scrolling precision web game with multiple active state-machine configurations mimicking physics models for directional jumping, thrust velocity caps, and global gravity inversion.
-Architected a full drag-and-drop Level Editor UI from scratch, enabling users to place, stack, scale, rotate, and map hazard data models to pixel-perfect grids with built-in pipeline configurations for JSON importing and exporting.
-Developed a proximity alert lookahead algorithm that monitors vector differences between the player and oncoming obstacle data structures, mapping real-time distances directly to dynamic CSS vignette properties and warning behaviors.
-Programmed a zero-dependency Node.js HTTP server using asynchronous promise-based file streams (node:fs) to dynamically parse resource routes, validate custom MIME types, and manage request-response lifecycles.
+*   **Engineered a side-scrolling precision web game with multiple active state-machine configurations mimicking physics models for directional jumping, thrust velocity caps, and global gravity inversion.
+*   **Architected a full drag-and-drop Level Editor UI from scratch, enabling users to place, stack, scale, rotate, and map hazard data models to pixel-perfect grids with built-in pipeline configurations for JSON importing and exporting.
+*   **Developed a proximity alert lookahead algorithm that monitors vector differences between the player and oncoming obstacle data structures, mapping real-time distances directly to dynamic CSS vignette properties and warning behaviors.
+*   **Programmed a zero-dependency Node.js HTTP server using asynchronous promise-based file streams (node:fs) to dynamically parse resource routes, validate custom MIME types, and manage request-response lifecycles.
