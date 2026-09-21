@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Geometry Dash</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameWindow">
+        <div id="menuScreen" class="screen">
+            <h1>JAVASCRIPT DASH</h1>
+            <div id="stageList"></div>
+            <button class="btn" id="openEditorBtn">🎨 Stage Editor</button>
+        </div>
+        
+        <div id="gameArea" class="hidden">
+            <div class="box" id="player"></div>
+            <div class="line" id="groundLine"></div>
+            <!--<div id="ceilingLine" class="line ceiling-line"></div>-->
+            <div class="finish-line" id="finishLine"></div>
+            <div id="obstacleContainer"></div>
+        </div>
+        
+        <div id="editorScreen" class="screen hidden">
+            <div class="editor-toolbar">
+                <div class="toolbar-group">
+                    <label>Stage Name:</label>
+                    <input type="text" id="editorStageName" value="My Custom Stage">
+                </div>
+                <div class="toolbar-group">
+                    <label>Speed:</label>
+                    <input type="number" id="editorStageSpeed" value="4" min="1" max="10" step="0.5">
+                </div>
+                <div class="toolbar-group">
+                    <label>Finish X:</label>
+                    <input type="number" id="editorFinishX" value="2500" min="500" step="100">
+                </div>
+                <div class="toolbar-group">
+                    <button id="rotateObstacleBtn" class="btn-small">🔄 Rotate (R)</button>
+                </div>
+                <!-- <div class="toolbar-group" style="margin-left: auto;"> -->
+                <div class="toolbar-group">
+                    <button class="btn-small" id="editorTestBtn">▶ Test</button>
+                    <button class="btn-small" id="editorSaveBtn">💾 Save</button>
+                    <button class="btn-small" id="editorLoadBtn">📂 Load</button>
+                    <button class="btn-small" id="editorExportBtn">📋 Export</button>
+                    <button class="btn-small btn-danger" id="editorBackBtn">← Back</button>
+                </div>
+            </div>
+            
+            <div class="editor-body">
+                <div class="editor-palette">
+                    <h3>Click to Select</h3>
+                    <div class="palette-item" data-type="spike">
+                        <div class="palette-spike"></div>
+                        <span>Spike</span>
+                    </div>
+                    <div class="palette-item" data-type="block">
+                        <div class="palette-block"></div>
+                        <span>Block</span>
+                    </div>
+                    <div class="palette-item" data-type="finish">
+                        <div class="palette-finish"></div>
+                        <span>Finish Line</span>
+                    </div>
+                    <div class="palette-item" data-type="portal-ship">
+                        <div class="palette-portal-ship"></div>
+                        <span>Ship Portal</span>
+                    </div>
+                    <div class="palette-item" data-type="portal-cube">
+                        <div class="palette-portal-cube"></div>
+                        <span>Cube Portal</span>
+                    </div>
+                    <div class="palette-item" data-type="portal-ball">
+                        <div class="palette-portal-ball"></div>
+                        <span>Ball Portal</span>
+                    </div>
+                    <div class="palette-item" data-type="ground-hole">
+                        <div class="palette-ground-hole"></div>
+                        <span>Ground Hole</span>
+                    </div>
+                    <div class="palette-item" data-type="ceiling-hole">
+                        <div class="palette-ceiling-hole"></div>
+                        <span>Ceiling Hole</span>
+                    </div>
+                    <div class="palette-item" data-type="ceiling-line">
+                        <div class="palette-ceiling-line"></div>
+                        <span>Ceiling Block</span>
+                    </div>
+
+                    <h3 style="margin-top: 20px;">Instructions</h3>
+                    <p class="editor-help">
+                        1. Click an item above<br>
+                        2. Click on the stage to place<br>
+                        3. Blocks snap to grid<br>
+                        4. Stack blocks vertically!<br>
+                        5. Click placed items to select<br>
+                        6. Drag them to move<br>
+                        7. Press DELETE to remove<br>
+                        8. Scroll right to see more
+                    </p>
+                </div>
+                
+                <div class="editor-stage-wrapper">
+                    <div class="editor-stage" id="editorStage">
+                        <div class="editor-ground"></div>
+                        <div class="editor-finish-indicator" id="editorFinishIndicator"></div>
+                        <div id="editorObstacles"></div>
+                        <div class="drag-ghost hidden" id="dragGhost"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="editor-obstacle-list">
+                <h3>Placed Obstacles (<span id="obstacleCount">0</span>) — Click to select, ✕ to delete</h3>
+                <div id="obstacleListItems"></div>
+            </div>
+        </div>
+        
+        <div id="winOverlay" class="overlay hidden">
+            <h1 class="win-text">YOU WIN!</h1>
+            <button class="btn" id="nextStageBtn">Next Stage</button>
+            <button class="btn" id="menuBtn1">Menu</button>
+        </div>
+        
+        <div id="loseOverlay" class="overlay hidden">
+            <h1 class="lose-text">GAME OVER</h1>
+            <button class="btn" id="retryBtn">Retry</button>
+            <button class="btn" id="menuBtn2">Menu</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
