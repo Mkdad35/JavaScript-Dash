@@ -1,0 +1,23 @@
+{
+  "name": "java-dash",
+  "version": "1.0.0",
+  "description": "a web game like geometry dash",
+  "keywords": [
+    "geometry",
+    "dash",
+    "html",
+    "css",
+    "javascript",
+    "web",
+    "development",
+    "node",
+    "frontend"
+  ],
+  "license": "ISC",
+  "author": "Mkdad Mohammed",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
