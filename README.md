@@ -18,6 +18,10 @@ A precision, side-scrolling arcade platformer inspired by Geometry Dash. Built u
 *   **Backend:** Node.js (Native HTTP module, fs filesystem stream orchestration).
 *   **Data Representation:** JSON serialized state objects for puzzle stages.
 
+---
+
+
+---
 
 *   **Engineered a side-scrolling precision web game with multiple active state-machine configurations mimicking physics models for directional jumping, thrust velocity caps, and global gravity inversion.
 *   **Architected a full drag-and-drop Level Editor UI from scratch, enabling users to place, stack, scale, rotate, and map hazard data models to pixel-perfect grids with built-in pipeline configurations for JSON importing and exporting.
